@@ -1,0 +1,14 @@
+Exercise: Identify the best- and worst-case scenarios for each strategy and derive the best-case and worst-case time usage.
+
+1. Best case er at man rammer første gang. Det sker, hvis svaret er 1. O(1)
+Worst case er at man først rammer ved 20. O(n) (n=listens længde)
+
+2.Best case er at man rammer første gang (20). O(1)
+Worst case er at man først rammer ved 1. O(n) (n=listens længde)
+
+3.Best case er at man ramme første gang. O(1)
+Worst case, er at man rammer efter 5 gange. Muligvis O(log(n))
+
+
+
+
