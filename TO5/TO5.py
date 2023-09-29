@@ -24,26 +24,58 @@ reversed=True
 i = 1
 
 while reversed and i < len(n):
-    if n[i-1] < n[i]:
-        reversed = False
-    else:
-        i += 1
 
-print(reversed)
+	if n[i-1] < n[i]:
+	
+		reversed = False
+
+	else:
+
+		i += 1
+
 
 if reversed:
-    midtpoint = len(n)//2
-    for i in range(midtpoint):
-<<<<<<< HEAD
-        n_ordered.insert(i, n[i])
-        n_ordered.insert(i, n[(len(n)-1-i)])
-    if len(n)%2 != 0:
-        n_ordered.insert(midtpoint, n[midtpoint]) 
 
-print(n_ordered)
-=======
-        print(n)
-        print(i, -(1+i))
-        n[i], n[-(1+i)] = n[-(1+i)], n[i]
-print(n)
->>>>>>> e169cf4a8468729ffee2eee9f3c4ed8dd370cfbd
+	midtpoint = len(n)//2
+	
+	for i in range(midtpoint):
+
+		n[i], n[-(1+i)] = n[-(1+i)], n[i]
+
+
+# Implementeret i insertion sort
+
+x=[1,5,4,3,2,10,4]
+i = 1
+
+while i < len(x): 
+    j = i 
+    start = i-1
+    end = i-1
+    
+    if i < len(x)-1:
+        
+        while x[end] >= x[end+1]:
+            end += 1
+            print(start,end)
+
+        if end > start:
+            print(start,end)
+            print(x[start:end+1])
+            midtpoint = start+(end-start)//2
+            print("midtpoint",midtpoint)
+            for k in range(start, midtpoint+1):
+                print("k",k)
+                x[k], x[end-(k-1)] = x[end-(k-1)], x[k]
+                print(x)
+            i + (end-start)
+    
+    while j > 0 and x[j-1] > x[j]:
+        x[j-1], x[j] = x[j], x[j-1]
+        j -= 1
+        print(x)
+    
+    i += 1
+        
+        
+print(x)
