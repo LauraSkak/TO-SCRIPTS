@@ -52,30 +52,21 @@ while i < len(x):
     j = i 
     start = i-1
     end = i-1
-    print(i)
     
     if i < len(x)-1:
         
         while x[end] >= x[end+1]:
             end += 1
-            print(start,end)
 
         if end > start:
-            print(start,end)
-            print(x[start:end+1])
             midtpoint = start+(end-start)//2
-            print("midtpoint",midtpoint)
             for k in range(start, midtpoint+1):
-                print("k",k)
                 x[k], x[end-(k-1)] = x[end-(k-1)], x[k]
-                print(x)
             i = i + (end-start)
-            print(i)
     
     while j > 0 and x[j-1] > x[j]:
         x[j-1], x[j] = x[j], x[j-1]
         j -= 1
-        print(x)
     
     i += 1
         
