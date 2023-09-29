@@ -45,13 +45,14 @@ if reversed:
 
 # Implementeret i insertion sort
 
-x=[1,5,4,3,2,10,4]
+x=[1,5,4,4, 3,2,10,4]
 i = 1
 
 while i < len(x): 
     j = i 
     start = i-1
     end = i-1
+    print(i)
     
     if i < len(x)-1:
         
@@ -68,7 +69,8 @@ while i < len(x):
                 print("k",k)
                 x[k], x[end-(k-1)] = x[end-(k-1)], x[k]
                 print(x)
-            i + (end-start)
+            i = i + (end-start)
+            print(i)
     
     while j > 0 and x[j-1] > x[j]:
         x[j-1], x[j] = x[j], x[j-1]
@@ -79,3 +81,71 @@ while i < len(x):
         
         
 print(x)
+
+
+# Implementeret i insertion sort with steps
+
+x=[1,5,4,3,2,10,4]*100
+
+steps = 0
+i = 1
+steps += 1
+
+while i < len(x): 
+    steps += 1
+    j = i 
+    steps += 1
+    start = i-1
+    steps += 1
+    end = i-1
+    steps += 1
+    
+    if i < len(x)-1:
+        steps += 1
+        while x[end] >= x[end+1]:
+            steps += 1
+            end += 1
+            steps += 1
+
+        if end > start:
+            steps += 1
+            midtpoint = start+(end-start)//2
+            steps += 1
+            for k in range(start, midtpoint+1):
+                steps += 1
+                x[k], x[end-(k-1)] = x[end-(k-1)], x[k]
+                steps += 1
+            i + (end-start)
+            steps += 1
+    
+    while j > 0 and x[j-1] > x[j]:
+        steps += 1
+        x[j-1], x[j] = x[j], x[j-1]
+        steps += 1
+        j -= 1
+        steps += 1
+    
+    i += 1
+    steps += 1
+        
+       
+#print("steps", steps)
+
+
+x=[1,5,4,3,2,10,4]*100
+
+steps = 0
+steps += 1
+
+for i in range(1,len(x)):
+    steps += 1
+    j = i
+    steps += 1
+    while j > 0 and x[j-1] > x[j]: 
+        steps += 1
+        x[j-1], x[j] = x[j], x[j-1]
+        steps += 1
+        j -= 1
+        steps += 1
+
+#print("steps", steps)
