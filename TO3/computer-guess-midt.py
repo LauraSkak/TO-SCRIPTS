@@ -41,5 +41,3 @@ for i in range(20):
         top=guess-1
         guess=round(bottom+(top-bottom)/2)
         
-
-    print("I must have been too low, right?", result)
