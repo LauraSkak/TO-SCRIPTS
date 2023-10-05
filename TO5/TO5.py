@@ -45,10 +45,9 @@ if reversed:
 
 # Implementeret i insertion sort
 
-x=[1,5,4,4, 3,2,10,4]
-i = 1
+x=[1,5,4,4,3,2,10,4]
 
-while i < len(x): 
+for i in range(1,len(x)): 
     j = i 
     start = i-1
     end = i-1
@@ -62,13 +61,10 @@ while i < len(x):
             midtpoint = start+(end-start)//2
             for k in range(start, midtpoint+1):
                 x[k], x[end-(k-1)] = x[end-(k-1)], x[k]
-            i = i + (end-start)
     
     while j > 0 and x[j-1] > x[j]:
         x[j-1], x[j] = x[j], x[j-1]
         j -= 1
-    
-    i += 1
         
         
 print(x)
