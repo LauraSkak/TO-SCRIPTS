@@ -22,10 +22,15 @@ def longest(x,y):
 
 #Exercise: Write a function that computes the distance between two points.
 
-def distance(x,y):
-    return sqrt((x[0]-y[0])**2+(x[1]-y[1])**2)
-#x=(1,5)
-#y=(3,6)
-#print(distance(x,y))
+def distance(p1,p2):
+    x1 = p1[0]
+    x2 = p2[0]
+    y1 = p1[1]
+    y2 = p2[1]
+    return sqrt((x1-x2)**2+(y1-y2)**2)
+
+#p1=(1,5)
+#p2=(3,6)
+#print(distance(p1,p2))
 
     

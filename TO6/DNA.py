@@ -1,6 +1,6 @@
 #Exercise: Write a function, kmers, which returns a list of all k-mers in a given string for a specific k:
 
-def k_mer(k,x):
+def k_mer(x,k):
     kmer_list=[]
     for i in range(len(x)-k+1):
         kmer_list.append(x[i:i+k])
@@ -43,6 +43,7 @@ CODON_MAP = {'TTT': 'F', 'TTC': 'F', 'TTA': 'L', 'TTG': 'L',
              'GCT': 'A', 'GCC': 'A', 'GCA': 'A', 'GCG': 'A', 
              'GAT': 'D', 'GAC': 'D', 'GAA': 'E', 'GAG': 'E', 
              'GGT': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G'}
+
 def codon_translate(x):
     protein=''
     for i in range(0,len(x)-2,3):
