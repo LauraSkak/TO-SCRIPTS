@@ -51,4 +51,4 @@ def codon_translate(x):
         protein+=CODON_MAP[codon]
     return protein
 
-#print(codon_translate('ATGACCGAACAGTAG'))
+print(codon_translate('ATGACCGAACAGTAG'))
